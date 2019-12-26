@@ -1,0 +1,35 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Student List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Math</th>
+            <th>English</th>
+            <th>History</th>
+            <th>AVG</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of students | async">
+            <td>{{student.name}}</td>
+            <td>{{student.surname}}</td>
+            <td>{{student.mathMark}}</td>
+            <td>{{student.engMark}}</td>
+            <td>{{student.histMark}}</td>
+            <td></td>
+            <td>
+              <!-- <button (click)="studentDetails(student.id)" class="btn btn-warning">Details</button> -->
+              <button (click)="deleteStudent(student.id)" style="margin-left: 10px" class="btn btn-danger">Delete</button>
+              <button (click)="updateStudent(student.id)" style="margin-left: 10px" class="btn btn-warning">Update</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

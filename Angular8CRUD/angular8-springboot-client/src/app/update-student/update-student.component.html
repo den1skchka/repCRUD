@@ -1,0 +1,31 @@
+<h3>Update Students</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name"  required [(ngModel)]="student.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Surname</label>
+      <input type="text" class="form-control" id="surname" required [(ngModel)]="student.surname" name="surname">
+    </div>
+
+    <div class="form-group">
+      <label for="mathMark">Math</label>
+      <input type="text" class="form-control" id="mathMark" required [(ngModel)]="student.mathMark" name="mathMark">
+    </div>
+
+    <div class="form-group">
+      <label for="engMark">English</label>
+      <input type="text" class="form-control" id="engMark" required [(ngModel)]="student.engMark" name="engMark">
+    </div>
+
+    <div class="form-group">
+      <label for="histMark">History</label>
+      <input type="text" class="form-control" id="histMark" required [(ngModel)]="student.histMark" name="histMark">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
